@@ -2,7 +2,7 @@ var HtmlScreenshotReporter = require('protractor-jasmine2-screenshot-reporter');
 var AllureReporter = require('jasmine-allure-reporter');
 
 var reporter = new HtmlScreenshotReporter({
-  dest: 'target/screenshots',
+  dest: '../report/screenshots',
   filename: 'my-report.html'
 });
 
@@ -38,7 +38,7 @@ exports.config = {
     jasmine.getEnv().addReporter(reporter);
     var AllureReporter = require('jasmine-allure-reporter');
     jasmine.getEnv().addReporter(new AllureReporter({
-      resultsDir: 'allure-results'
+      resultsDir: '../allure-results'
     }));
   },
 

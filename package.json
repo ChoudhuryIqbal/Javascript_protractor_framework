@@ -1,0 +1,20 @@
+{
+  "name": "javascript_protractor_framework",
+  "version": "1.0.0",
+  "description": "Protractor Javascript",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "allure-commandline": "^2.13.8",
+    "jasmine-allure-reporter": "^1.0.2",
+    "protractor": "^7.0.0",
+    "protractor-jasmine2-screenshot-reporter": "^0.5.0"
+  },
+  "scripts": {
+    "test": "node node_modules/protractor/bin/webdriver-manager update  && node node_modules/protractor/bin/protractor  configuration/conf.js"
+  },
+  "author": "iqbal",
+  "license": "ISC"
+}

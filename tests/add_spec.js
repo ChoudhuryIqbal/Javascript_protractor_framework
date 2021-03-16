@@ -5,6 +5,7 @@ let homepage=require("../pages/homepage");
 describe ('Common Functionality Testing', function (){
 
     beforeEach(function(){
+        browser.driver.manage().window().maximize();
         homepage.getURL("https://juliemr.github.io/protractor-demo/");
     })
     it ("It should add two Integers",function(){
@@ -16,6 +17,6 @@ describe ('Common Functionality Testing', function (){
         homepage.verifyResult(homepage.getResult(),"3");
     })
     afterEach(function(){
-        browser.driver.quit();
+        console.log("Finish Executing Testcases.")
     })
 })
