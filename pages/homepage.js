@@ -5,9 +5,14 @@ let homepage=function ()
     let submit_btn=element(by.id('gobutton'));
     let result_txt=element(by.css('.ng-binding'));
 
-    this.enterFirstNumber=function (first){
-        firstNumber_input.sendKeys(fist);
+    
 
+    this.enterFirstNumber=function (first){
+        firstNumber_input.sendKeys(first);
+
+    };
+    this.getURL=function (url){
+        browser . get(url);
     };
 
     this.enterSecondNumber=function(second){
@@ -26,3 +31,4 @@ let homepage=function ()
         expect (actual).toBe(expected);
     }
 }
+module.exports=new homepage();

@@ -1,13 +1,21 @@
+
+
+let homepage=require("../pages/homepage");
+
 describe ('Common Functionality Testing', function (){
+
+    beforeEach(function(){
+        homepage.getURL("https://juliemr.github.io/protractor-demo/");
+    })
     it ("It should add two Integers",function(){
-        browser .get ("https://juliemr.github.io/protractor-demo/");
-        element (by.model('first') ).sendKeys("1");
-        element(by.model('second')).sendKeys("2");
-        element(by.id('gobutton')).click();
+       
+        homepage.enterFirstNumber("1");
+        homepage.enterSecondNumber("2");
+        homepage.enterSubmitBtn();
         browser.sleep(3000);
-        var actualText=element(by.css('.ng-binding')).getText();
-        expect(actualText).toBe('3');
-
-
+        homepage.verifyResult(homepage.getResult(),"3");
+    })
+    afterEach(function(){
+        browser.driver.quit();
     })
 })
