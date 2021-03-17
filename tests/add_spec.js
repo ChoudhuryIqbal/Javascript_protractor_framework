@@ -27,8 +27,8 @@ describe ('Common Functionality Testing', function (){
         browser.driver.navigate().refresh();
     })
 
-    using(dataCopy.dataParent, function (text) {
-        it ("It should add two Integers",function(){
+    using(dataCopy.dataParent, function (text,description) {
+        it ("It should add two Integers"+description,function(){
        
             homepage.enterFirstNumber(text.firstInput);
             homepage.enterSecondNumber(text.secondInput);
